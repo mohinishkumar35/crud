@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body background=
+"https://www.hdwallpapers.in/download/geometric_squres_shapes_pattern_white_background_hd_white_background-HD.jpg>
+<h1 align="center" style="margin: 10px; margin-top: 20px;">Registation Page</h1>
+<div align="center" style="margin: 20px;color: red;">
+            {{ msg }}
+        </div>
+<form align="center" style="margin: 10px;" action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+    <div style="margin-bottom: 8px; margin-top: 20px;">
+        Name:<input type="text" name="name" required />
+    </div>
+    
+    <br>
+    <div style="margin-bottom: 8px;">
+        Email:<input type="email" name="email" required />
+    </div>
+    
+    <br>
+    <div style="margin-bottom: 8px;">
+        Contact:<input type="tel" name="contact" required />
+    </div>
+    
+    <br>
+    <div style="margin-bottom: 8px;">
+        Password:<input type="password" name="password" required />
+    </div>
+    <br>
+    <div style="margin-bottom: 8px;">
+        Confirm Password:<input type="password" name="cpassword" required />
+    </div>
+    <button style="background-color: brown; color: white; font-size: 20px;" type="submit">Submit</button>
+</form>
+</body>
+</html>
